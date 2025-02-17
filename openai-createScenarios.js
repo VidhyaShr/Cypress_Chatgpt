@@ -74,7 +74,7 @@ function createTestCases(){
 
 function createFeatureFile(){
   setTimeout(()=>{
-    const openai = new OpenAI({ apiKey: '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'});
+    const openai = new OpenAI({ apiKey: '*************************'});
     fs.readFile('cypress/e2e/BDD/********.feature', 'utf8', async (err,data) => {
      const completion = await openai.chat.completions.create({
        messages: [{ role: "system", content: "In cypress BDD Framework, create step definitions using valid selectors for given scenario" + data}],
